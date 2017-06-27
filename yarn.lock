@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@orodio/interleave@^0.0.3":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@orodio/interleave/-/interleave-0.0.3.tgz#b8767ba43ef7bfe90870eb44e38a37ee5b761cb9"
+"@orodio/interleave@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@orodio/interleave/-/interleave-0.0.4.tgz#1c74ad05e06adae92e97d89bfdaca51c7abe1363"
   dependencies:
     babel-polyfill "^6.23.0"
     babel-runtime "^6.23.0"

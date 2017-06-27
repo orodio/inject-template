@@ -7,7 +7,7 @@
   "author": "James Hunter <james@bjorkman.com>",
   "license": "MIT",
   "dependencies": {
-    "@orodio/interleave": "^0.0.3",
+    "@orodio/interleave": "^0.0.4",
     "babel-polyfill": "^6.23.0",
     "babel-runtime": "^6.23.0"
   },
