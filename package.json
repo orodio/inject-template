@@ -1,0 +1,31 @@
+{
+  "name": "@orodio/inject-template",
+  "version": "0.0.1",
+  "description": "orodio does template injection",
+  "main": "lib/index.js",
+  "repository": "https://github.com/orodio/template-injection",
+  "author": "James Hunter <james@bjorkman.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@orodio/interleave": "^0.0.3",
+    "babel-polyfill": "^6.23.0",
+    "babel-runtime": "^6.23.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-jest": "^20.0.3",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-latest": "^6.24.1",
+    "jest": "^20.0.3"
+  },
+  "scripts": {
+    "clean": "rm -rf ./lib && mkidr ./lib",
+    "build": "yarn clean && babel src/index.js -o lib/index.js",
+    "build:watch": "yarn build -- --w",
+    "test": "jest",
+    "test:watch": "yarn test -- --watch",
+    "publish": "yarn test && yarn build"
+  }
+}

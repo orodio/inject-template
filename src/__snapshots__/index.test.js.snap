@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`inject 1`] = `
+"
+    Hello bob the builder.
+    How is your cat named Pilchard?
+    This is a random string injection!!!.
+  "
+`;
