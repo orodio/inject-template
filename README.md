@@ -9,7 +9,32 @@ yarn add @orodio/inject-template
 ```
 
 ### Use
+```javascript
+import { inject } from '@orodio/inject-template'
 
+const magicString = inject`
+  One ${ d => d.type },
+  Two ${ d => d.type },
+  ${ d => d.color1 } ${ d => d.type },
+  ${ d => d.color2 } ${ d => d.type }.
+`
+
+const str = magicString({
+  type: 'fish',
+  color1: 'Red',
+  color2: 'Blue',
+})
+
+console.log(str)
+// One fish,
+// Two fish,
+// Red fish,
+// Blue fish.
+
+
+```
+
+### Advanced Example
 ```javascript
 // ./graphql.js
 import { inject } from '@orodio/inject-template'
@@ -26,13 +51,13 @@ export const graphQL = (...query) => (data={}) =>
 
 
 // ./Counter.js
-
+import React from 'react'
 import { graphQL } from './graphql'
 
 // -------------------------------------------- AND THIS BIT
 const query = graphQL`
   query {
-    counter(id: "${ d => d.id }") {
+    counter(id: "${ d => d.id /* :magic: interpolating in a function :magic: */}") {
       title
       count
     }
